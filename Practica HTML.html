@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>                                       <!--Inicio del HTML-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica HTML SQP</title>
+        <style>                              /* Inicio del contenido de estilo*/
+            * {
+                box-sizing: border-box;
+                
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* estilo del Header*/
+            header{
+                background-color: rgb(228, 146, 224);
+                padding: 50px;
+                text-align: center;
+                font-size: 20px;
+                color: white;
+                margin-left: 0px;
+            }
+
+            header img{
+                float: left;
+                background-position: left;
+                width: 200px;
+                height: 200px;
+
+                margin-right: 10px;
+                margin-left: 0px;
+            }
+
+            header h1{
+                text-align: center;
+                font-size: 50px;
+                margin-bottom: 0px;
+            }
+
+            header h2{
+                font-size: larger;
+                margin-top: 0px;
+            }/* Final del estilo del Header*/
+
+            /* Estilo del menu de navegacion*/
+            .site-nav {
+                margin-top: 40px;
+            }
+
+            .site-nav ul {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .site-nav li {
+                list-style: none;
+                float: left;
+                margin-right: 5px;
+            }
+
+            .site-nav a {
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 50px;
+                border: 3px solid #e5e9dc;
+                border-bottom: none;
+            }
+
+            .site-nav a:hover {
+                background-color: #e5e9dc;
+            }
+            /* Final del estilo del menu de navegacion*/
+            
+            /* Estilo del contenido general*/
+            .content-align{
+                width: 940px;
+                margin: 0 auto;
+                background:rgb(104, 187, 255);
+                text-align: center;
+            }
+
+            /*                                           Intento fallido de editar los check box
+            .sabor input[type="checkbox"] + label:before {
+                content: "";
+                width: 26px;
+                height: 26px;
+                float: left;
+                margin: 0.5em 0.5em 0 0;
+                border: 2px solid #ccc;
+                background: #fff;
+            }
+            .sabor input[type="checkbox"]:checked + label:before {
+                border-color: #0fbf12;
+            }
+
+            .sabor input[type="checkbox"]:checked + label:after {
+                content: "";
+                width: 12px;
+                height: 6px;
+                border: 4px solid #0fbf12;
+                float: left;
+                margin-left: -1.95em;
+                border-right: 0;
+                border-top: 0;
+                margin-top: 1em;
+                transform: rotate(-55deg);
+            }
+
+            .sabor input[type="checkbox"] {
+                display: none;
+            }
+
+            .sabor input[type="checkbox"] + label {
+                font-weight: bold;
+                line-height: 3em;
+                color: #ccc;
+            }
+            .sabor input[type="checkbox"]:checked + label {
+                color: #0fbf12;
+
+            }                                             Intento fallido de editar los check box*/
+
+
+                    /* Estilo de las tablas*/
+            table{
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            th, td {
+                width: 10%;
+                text-align: center;
+                padding-left: 100px;
+            }       /* Final del estilo de las Tablas*/
+
+            /* Final del estilo del contenido general*/
+            footer {
+                text-align: center;
+                font-size: 85%;
+                color: rgb(0, 0, 0);
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+
+
+
+        </style>                        
+    </head>
+
+    <header>                                    <!--Inicio del header-->
+        <div class="container">
+            <img src="Cravella.jpg" alt="LogoCravella" >
+            <h1>Cravella</h1> <h2>Pasteles y postres</h2>
+
+            <nav class="site-nav">
+                <ul class="group">              <!--Lista del menu de navegacion-->
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Formulario</a></li>
+                    <li><a href="#">Pedidos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>                                   <!--Final del Header-->
+
+    <body>                                      <!--Inicio del body-->
+
+       
+        <div class="content-align">
+            <h2 class="formulario">Formulario de Pasteles</h2>
+
+            <hr>
+            <form action="/accion.js" id="form1" method="post">         <!--Datos del cliente-->
+                <label for="nombre" class="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br><br>
+                <label for="telefono">Teléfono:</label>
+                <input type="number" id="telefono" name="telefono"><br><br>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="descripcion">Descripción general del pastel:</label><br>
+                <input type="text" id="descripcion" name="descripcion" size="100"><br><br>
+                <input type="submit" class="submit" value="Submit">
+                <input type="reset" class="reset">
+            </form>
+                                                                        <!--Check box del sabor-->
+            <p>Elige los sabores que querras de tu pastel. (+30 pesos por sabor extra)</p>
+            <label class="sabor"><input type="checkbox" id="sabor1" value="sabor-checkbox1"> Cocolate<i></i></label>
+            <label class="sabor"><input type="checkbox" id="sabor2" value="sabor-checkbox2"> Vanilla</label>
+            <label class="sabor"><input type="checkbox" id="sabor3" value="sabor-checkbox3"> Fresa</label>
+            <label class="sabor"><input type="checkbox" id="sabor4" value="sabor-checkbox4"> Platano</label>
+            <label class="sabor"><input type="checkbox" id="sabor5" value="sabor-checkbox5"> Cereza</label>
+
+                                                                        <!--Check box del adorno-->
+            <p>Elige los diferentes adornos que le quieres poner al pastel</p>
+            <label><input type="checkbox" id="adorno1" value="adorno-checkbox1"> Fondant ($50)</label>
+            <label><input type="checkbox" id="adorno2" value="adorno-checkbox2"> Merengue ($35)</label>
+            <label><input type="checkbox" id="adorno3" value="adorno-checkbox3"> Chispas de Chocolate ($15)</label>
+            <label><input type="checkbox" id="adorno4" value="adorno-checkbox4"> Frutas ($55)</label>
+            <label><input type="checkbox" id="adorno5" value="adorno-checkbox5"> Otro</label>
+            <hr>
+
+                                                                        <!--Tablas de sabores restantes-->
+            <table class="sabor">
+                <tr>
+                    <th>Sabor</th>
+                    <th>Pedidos</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr>
+                    <td>Chocolate</td>
+                    <td>12</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Vanilla</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Fresa</td>
+                    <td>8</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Plátano</td>
+                    <td>12</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Cereza</td>
+                    <td>5</td>
+                    <td>8</td>
+                </tr>
+            </table>
+            <hr>
+
+                                                                        <!--Tablas de adornos restantes-->
+            <table class="adorno">
+                <tr>
+                    <th>Adorno</th>
+                    <th>Pedidos</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr>
+                    <td>Fondant</td>
+                    <td>4</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Merengue</td>
+                    <td>500g</td>
+                    <td>1200g</td>
+                </tr>
+                <tr>
+                    <td>Chispas de Chocolate</td>
+                    <td>200g</td>
+                    <td>800g</td>
+                </tr>
+                <tr>
+                    <td>Frutas</td>
+                    <td>300g</td>
+                    <td>500g</td>
+                </tr>
+                <tr>
+                    <td>Otro</td>
+                    <td>NA</td>
+                    <td>NA</td>
+                </tr>
+            </table>
+        </div>
+    </body>                                     <!--Final del Body-->
+
+    <footer>
+        <p>&copy; 2022 - Cravella Pastelería y Postres.</p>
+    </footer>
+
+</html>                                         <!--Final del HTML-->
